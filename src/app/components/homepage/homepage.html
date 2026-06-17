@@ -23,6 +23,8 @@
 </section>
 
 
+<div class="section-divider"></div>
+
 
 <section id="about" class="about">
 
@@ -73,7 +75,7 @@
 
 
 
-
+<div class="section-divider"></div>
 
 
 <section id="sport" class="sport-story">
@@ -149,6 +151,8 @@
 
 </section>
 
+
+<div class="section-divider"></div>
 
 
 
@@ -232,28 +236,79 @@
 
     <div class="project-grid">
 
-      <div class="project-card">
-        <i class="bi bi-code-slash"></i>
-        <h4>Web App 1</h4>
-        <p>
-          Progetto iniziale focalizzato su struttura HTML, layout e primi elementi di interattività.
+      <div class="project-card" [class.active]="activeProject === 1" (click)="toggleProject(1)">
+
+        <div class="project-top">
+          <i class="bi bi-code-slash"></i>
+          <h4>Web App 1</h4>
+          <i class="bi bi-chevron-down arrow"></i>
+        </div>
+
+        <p class="project-summary">
+          Progetto iniziale su HTML, CSS e struttura base delle pagine web.
         </p>
+
+        <div class="project-details">
+          <p><strong>Obiettivo:</strong> imparare le basi dello sviluppo web</p>
+          <p><strong>Cosa ho fatto:</strong> layout, sezioni, primi componenti UI</p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Layout</span>
+          </div>
+        </div>
+
       </div>
 
-      <div class="project-card">
-        <i class="bi bi-window"></i>
-        <h4>Web App 2</h4>
-        <p>
-          Applicazione più avanzata con gestione della struttura, UI e miglioramento dell’usabilità.
+      <div class="project-card" [class.active]="activeProject === 2" (click)="toggleProject(2)">
+
+        <div class="project-top">
+          <i class="bi bi-window"></i>
+          <h4>Web App 2</h4>
+          <i class="bi bi-chevron-down arrow"></i>
+        </div>
+
+        <p class="project-summary">
+          Applicazione più strutturata con UI migliorata e organizzazione del codice.
         </p>
+
+        <div class="project-details">
+          <p><strong>Focus:</strong> migliorare UX e struttura</p>
+          <p><strong>Cosa ho fatto:</strong> componenti, pulizia codice, UI più coerente</p>
+
+          <div class="tags">
+            <span>UI</span>
+            <span>UX</span>
+            <span>Responsive</span>
+          </div>
+        </div>
+
       </div>
 
-      <div class="project-card">
-        <i class="bi bi-phone"></i>
-        <h4>Web App 3</h4>
-        <p>
-          Progetto completo con attenzione a design, componenti modulari e organizzazione del codice.
+      <div class="project-card" [class.active]="activeProject === 3" (click)="toggleProject(3)">
+
+        <div class="project-top">
+          <i class="bi bi-phone"></i>
+          <h4>Web App 3</h4>
+          <i class="bi bi-chevron-down arrow"></i>
+        </div>
+
+        <p class="project-summary">
+          Progetto finale completo con struttura modulare e design avanzato.
         </p>
+
+        <div class="project-details">
+          <p><strong>Focus:</strong> architettura e design completo</p>
+          <p><strong>Cosa ho fatto:</strong> componenti riutilizzabili e UI avanzata</p>
+
+          <div class="tags">
+            <span>Angular</span>
+            <span>Design</span>
+            <span>Componenti</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -305,6 +360,7 @@
 
 
 
+<div class="section-divider"></div>
 
 
 
@@ -330,13 +386,123 @@
     </p>
 
     <p class="future-text">
-      Nel frattempo cercherò di entrare nel mondo del lavoro per iniziare ad applicare concretamente ciò che sto studiando,
+      Nel frattempo cercherò di entrare nel mondo del lavoro per iniziare ad applicare concretamente ciò che sto
+      studiando,
       continuando a crescere sia a livello personale che professionale.
     </p>
 
     <p class="future-quote">
       “Il percorso non è una linea retta, ma un insieme di direzioni che si costruiscono passo dopo passo.”
     </p>
+
+  </div>
+
+</section>
+
+
+<div class="section-divider"></div>
+
+
+<section id="timeline" class="timeline">
+
+  <div class="timeline-header">
+
+    <p class="timeline-subtitle">
+      Il mio percorso
+    </p>
+
+    <h1 class="timeline-title">
+      Ogni traguardo ha costruito il mio futuro
+    </h1>
+
+    <p class="timeline-text">
+      Dalle prime bracciate in piscina fino all'università,
+      ogni esperienza ha contribuito a formare la persona che sono oggi.
+    </p>
+
+  </div>
+
+
+  <div class="timeline-container">
+
+
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100" data-aos-duration="900"
+      data-aos-easing="ease-out-cubic">
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <span class="year">2014</span>
+        <h3>Il primo tuffo</h3>
+        <p>
+          Inizio il percorso nel nuoto agonistico, scoprendo uno sport
+          che mi insegnerà disciplina, sacrificio e costanza.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200" data-aos-duration="900"
+      data-aos-easing="ease-out-cubic">
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <span class="year">2022</span>
+        <h3>Il ruolo di istruttore</h3>
+        <p>
+          Ottengo il brevetto e inizio il percorso come istruttore di nuoto,
+          imparando responsabilità e comunicazione.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="300" data-aos-duration="900"
+      data-aos-easing="ease-out-cubic">
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <span class="year">Giugno 2025</span>
+        <h3>PCTO - Borz Cucine Industriali</h3>
+        <p>
+          Entro per la prima volta in un ambiente aziendale reale e sviluppo
+          tre progetti di web application.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="timeline-item" data-aos="fade-left" data-aos-delay="400" data-aos-duration="900"
+      data-aos-easing="ease-out-cubic">
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-card">
+        <span class="year">2026</span>
+        <h3>Maturità e nuova partenza</h3>
+        <p>
+          Concludo il percorso scolastico e inizio il mio cammino
+          universitario in Ingegneria Informatica.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="timeline-item" data-aos="fade-right" data-aos-delay="500" data-aos-duration="900"
+      data-aos-easing="ease-out-cubic">
+      <div class="timeline-dot future-dot"></div>
+
+      <div class="timeline-card future-card">
+        <span class="year">Futuro</span>
+
+        <h3>Continuare a crescere</h3>
+
+        <p>
+          Continuare il nuoto, affrontare il percorso universitario
+          e costruire la mia esperienza nel mondo del lavoro e della tecnologia.
+        </p>
+      </div>
+
+    </div>
+
 
   </div>
 
