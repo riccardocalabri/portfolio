@@ -1,0 +1,73 @@
+body {
+    background: #f5f5f7;
+    font-family: -apple-system, BlinkMacSystemFont, 
+                 "Segoe UI", sans-serif;
+}
+
+/* Navbar stile Apple */
+.apple-navbar {
+    width: 70%;
+    margin: 20px auto;
+    padding: 12px 25px;
+
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border-radius: 50px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,0.08);
+
+    transition: 0.3s ease;
+}
+
+/* Logo */
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #111 !important;
+}
+
+.navbar-brand i {
+    margin-right: 8px;
+}
+
+/* Link */
+.nav-link {
+    color: #444 !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+.nav-link:hover {
+    color: black !important;
+    transform: translateY(-1px);
+}
+
+/* Link attivo */
+.nav-link.active {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+/* Icona menu mobile */
+.navbar-toggler {
+    color: black;
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+
+    .apple-navbar {
+        width: 90%;
+        border-radius: 25px;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+}
