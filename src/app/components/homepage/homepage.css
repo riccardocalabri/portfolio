@@ -1,3 +1,7 @@
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont,
@@ -187,7 +191,7 @@ body {
     }
 
     .hero-water {
-        height: 40vh;
+        height: 100vh;
     }
 }
 
@@ -363,26 +367,6 @@ body {
     line-height: 1.6;
 }
 
-/* MEDAGLIE */
-.medals {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.medals img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-
-    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
-    transition: 0.3s ease;
-}
-
-.medals img:hover {
-    transform: translateY(-5px) scale(1.1);
-}
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .sport-block,
@@ -398,10 +382,6 @@ body {
 
     .sport-block img {
         height: 250px;
-    }
-
-    .medals {
-        justify-content: center;
     }
 }
 
@@ -650,6 +630,13 @@ body {
     text-align: center;
     max-width: 1000px;
     margin: 140px auto 0;
+    padding: 20px;
+}
+
+.pcto-results h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1d1d1f;
 }
 
 .results-grid {
@@ -661,16 +648,34 @@ body {
 
 .result {
     padding: 25px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.result i {
+    font-size: 2.5rem;
+    color: #007aff;
+    margin-bottom: 15px;
+    display: block;
 }
 
 .result h4 {
     color: #1d1d1f;
     margin-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 .result p {
     color: #6e6e73;
     line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 /* =========================
@@ -1039,4 +1044,236 @@ body {
         transparent
     );
     margin: 0 auto;
+}
+
+
+
+
+
+/* =========================
+   GLOBAL RESPONSIVE FIX
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Fix viewport mobile */
+.hero,
+.future {
+    min-height: 100svh;
+    height: auto;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+    .hero-content,
+    .about-container,
+    .sport-hero,
+    .pcto-hero,
+    .timeline-header {
+        padding: 0 20px;
+    }
+
+    .sport-block,
+    .pcto-block {
+        gap: 35px;
+    }
+
+    .sport-block img,
+    .pcto-block img {
+        height: 280px;
+    }
+
+    .timeline-container {
+        padding-left: 10px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 10vw, 4rem);
+        line-height: 1.05;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+        margin: 15px 0 25px;
+    }
+
+    .hero-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    /* ABOUT */
+    .about {
+        padding: 80px 20px;
+    }
+
+    .about-title {
+        line-height: 1.2;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    /* SPORT + PCTO */
+    .sport-block,
+    .sport-block.reverse,
+    .pcto-block,
+    .pcto-block.reverse {
+        flex-direction: column;
+        gap: 25px;
+        margin: 50px auto;
+    }
+
+    .sport-text-block,
+    .pcto-text,
+    .sport-block img,
+    .pcto-block img {
+        width: 100%;
+    }
+
+    .sport-block img,
+    .pcto-block img {
+        height: 220px;
+    }
+
+    .sport-text-block h3,
+    .pcto-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .sport-text-block p,
+    .pcto-text p {
+        font-size: 1rem;
+    }
+
+    /* PROJECT GRID */
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* RESULTS */
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FUTURE */
+    .future {
+        padding: 80px 20px;
+    }
+
+    .future-title {
+        font-size: clamp(2rem, 9vw, 3rem);
+        line-height: 1.1;
+    }
+
+    .future-text {
+        font-size: 1rem;
+    }
+
+    .future-quote {
+        font-size: 1rem;
+    }
+
+    /* TIMELINE */
+    .timeline {
+        padding: 80px 20px;
+    }
+
+    .timeline-title {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .timeline-container::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        gap: 15px;
+    }
+
+    .timeline-dot {
+        width: 14px;
+        height: 14px;
+        margin-top: 25px;
+    }
+
+    .timeline-card {
+        padding: 20px;
+    }
+
+    .timeline-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-card p {
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .hero-title,
+    .future-title,
+    .timeline-title {
+        letter-spacing: -1px;
+    }
+
+    .about-card,
+    .project-card,
+    .result,
+    .timeline-card {
+        border-radius: 18px;
+        padding: 18px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .pcto-tags,
+    .tags {
+        justify-content: center;
+    }
 }

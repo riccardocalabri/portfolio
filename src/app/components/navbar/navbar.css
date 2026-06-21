@@ -6,7 +6,7 @@ body {
 
 /* Navbar stile Apple */
 .apple-navbar {
-    width: 70%;
+    width: 60%;
     margin: 20px auto;
     padding: 12px 25px;
 
@@ -62,8 +62,21 @@ body {
 @media (max-width: 992px) {
 
     .apple-navbar {
-        width: 90%;
-        border-radius: 25px;
+        width: 80%;
+        margin: 20px auto;
+        padding: 12px 25px;
+
+        background: rgba(255,255,255,0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        border-radius: 50px;
+        border: 1px solid rgba(255,255,255,0.5);
+
+        box-shadow:
+            0 8px 32px rgba(0,0,0,0.08);
+
+        transition: 0.3s ease;
     }
 
     .navbar-nav {
